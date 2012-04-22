@@ -18,6 +18,6 @@ def make_sprite(files, width, height, dst_width):
 	dst_image.save("sprite.png", "PNG")
 
 if len(sys.argv) < 5:
-	print "usage: '*.ext' src_width src_height dst_width"
+	sys.exit("usage: '*.ext' src_width src_height dst_width")
 else:
 	make_sprite(str(sys.argv[1]),int(sys.argv[2]),int(sys.argv[3]),int(sys.argv[4]))
