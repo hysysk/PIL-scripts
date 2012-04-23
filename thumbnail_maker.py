@@ -3,8 +3,8 @@ import os, sys, glob
 if len(sys.argv) < 3:
 	sys.exit("usage: '*.ext' size quality")
 
-fileList = glob.glob(sys.argv[1])
-for infile in fileList:
+file_list = glob.glob(sys.argv[1])
+for infile in file_list:
 	file,ext = os.path.splitext(infile)
 	outfile = file + "_thumb" + ext
 	img = Image.open(infile)
